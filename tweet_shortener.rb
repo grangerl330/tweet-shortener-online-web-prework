@@ -18,6 +18,7 @@ def word_substituter(tweet)
   tweet_array.collect do |word|
     if dictionary.keys.include?(word)
       word = dictionary[word]
+    else word 
     end 
   end
 end 
