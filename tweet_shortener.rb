@@ -14,11 +14,13 @@ def dictionary
 end
   
 def word_substituter(tweet)
-  tweet_array = tweet.split
-  tweet_array.collect do |word|
+  tweet_array = []
+  tweet.split.collect do |word|
     if dictionary.keys.include?(word)
       word = dictionary[word]
-    else word 
+      tweet_array << word 
+    else
+      tweet_array << word 
     end 
   end
   tweet_array.join(" ")
